@@ -190,6 +190,7 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = (props) => {
     focusTriggerAfterClose,
     onConfirm,
     styles,
+    onClose,
   } = props;
 
   if (process.env.NODE_ENV !== 'production') {
@@ -244,6 +245,13 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = (props) => {
         close?.({ triggerCancel: true });
         onConfirm?.(false);
       }}
+      onClose={
+        onClose ||
+        (() => {
+          close?.({ triggerCancel: true });
+          onConfirm?.(false);
+        })
+      }
       open={open}
       title=""
       footer={null}

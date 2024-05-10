@@ -74,6 +74,7 @@ Common props ref：[Common props](/docs/react/common-props)
 | zIndex | The `z-index` of the Modal | number | 1000 |  |
 | onCancel | Specify a function that will be called when a user clicks mask, close button on top right or Cancel button | function(e) | - |  |
 | onOk | Specify a function that will be called when a user clicks the OK button | function(e) | - |  |
+| onClose | Specify a function that will be called when a user clicks close button on top right | function(e) | - |  |
 | afterOpenChange | Callback when the animation ends when Modal is turned on and off | (open: boolean) => void | - | 5.4.0 |
 
 #### Note

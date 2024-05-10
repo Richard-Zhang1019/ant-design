@@ -25,6 +25,8 @@ export interface ModalProps extends ModalCommonProps {
   onOk?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   /** Specify a function that will be called when a user clicks mask, close button on top right or Cancel button */
   onCancel?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  /** Specify a function that will be called when a user clicks close button on top right */
+  onClose?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   afterClose?: () => void;
   /** Callback when the animation ends when Modal is turned on and off */
   afterOpenChange?: (open: boolean) => void;
@@ -90,6 +92,7 @@ export interface ModalFuncProps extends ModalCommonProps {
   // TODO: find out exact types
   onOk?: (...args: any[]) => any;
   onCancel?: (...args: any[]) => any;
+  onClose?: (...args: any[]) => any;
   afterClose?: () => void;
   okButtonProps?: ButtonProps;
   cancelButtonProps?: ButtonProps;
